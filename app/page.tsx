@@ -394,9 +394,11 @@ export default function GAKopiLandingPage() {
 
             <div className="rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-5">
               <iframe
-                src="https://maps.google.com/maps?cid=147017043101107685&z=18&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.622780681456!2d117.16019467435702!3d-0.5672575352616757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df681001832dd3b%3A0x20a4f38c5f845e5!2sGA%20kopi!5e0!3m2!1sid!2sid!4v1780108491393!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-[24px] w-full h-[300px] sm:h-[450px]"
