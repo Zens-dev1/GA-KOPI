@@ -257,9 +257,7 @@ export default function GAKopiLandingPage() {
               </h1>
 
               <p className="text-white/75 text-base sm:text-lg leading-relaxed max-w-xl mb-10">
-                Rasanya mantap, bikin nongkrong makin nyaman.
-                Tempat santai untuk menikmati kopi,
-                cerita, dan malam di Palaran.
+                Bikin nongkrong makin nyaman.
               </p>
 
               {/* BUTTONS */}
@@ -312,46 +310,61 @@ export default function GAKopiLandingPage() {
 
       {/* MENU */}
       {activeSection === "menu" && (
-        <section className="relative z-10 min-h-screen px-4 sm:px-6 lg:px-10 pt-28 sm:pt-32 pb-20">
-          <div className="max-w-6xl mx-auto w-full">
+        <section className="relative z-10 min-h-screen flex items-center px-5 py-32 lg:px-10">
+          <div className="max-w-7xl mx-auto w-full">
 
-            <div className="mb-10 sm:mb-14 text-center">
-              <p className="uppercase tracking-[0.25em] text-[#49E46A] font-bold mb-3 text-xs sm:text-sm">
+            <div className="mb-16 text-center">
+              <p className="uppercase tracking-[0.3em] text-[#49E46A] font-bold mb-4">
                 MENU KAMI
               </p>
 
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-5">
                 Kopi Favorit
               </h2>
+
+              <p className="text-white/70 max-w-2xl mx-auto text-sm sm:text-base">
+
+              </p>
             </div>
 
             {/* MENU GRID */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 sm:gap-8">
               {menuItems.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-[26px] overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] transition-all duration-300"
+                  className="bg-white/5 backdrop-blur-sm rounded-[28px] overflow-hidden border border-white/10 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(0,0,0,0.25)] transition-all duration-300"
                 >
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-full h-56 sm:h-60 md:h-64 object-cover object-center"
+                    className="w-full h-56 sm:h-64 object-cover object-center"
                   />
 
-                  <div className="p-5 sm:p-6">
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-black text-base sm:text-lg leading-tight min-h-[44px]">
+                  <div className="p-6">
+                    <div className="flex items-center justify-between">
+                      <h3 className="font-black text-lg">
                         {item.name}
                       </h3>
 
-                      <span className="shrink-0 bg-[#49E46A] text-black px-3 py-1 rounded-full text-xs font-black">
+                      <span className="bg-[#49E46A] text-black px-4 py-1 rounded-full text-sm font-bold">
                         {item.price}
                       </span>
                     </div>
 
+                    {/* ORDER BUTTON */}
                     <button
                       onClick={() => setSelectedItem(item)}
-                      className="w-full mt-5 bg-[#49E46A] text-black py-3.5 rounded-full font-black text-sm hover:scale-[1.03] active:scale-95 transition-all duration-300"
+                      className="
+    w-full
+    mt-5
+    bg-[#49E46A]
+    text-black
+    py-4
+    rounded-full
+    font-black
+    hover:scale-105
+    transition-all duration-300
+  "
                     >
                       Order Sekarang
                     </button>
@@ -361,10 +374,10 @@ export default function GAKopiLandingPage() {
             </div>
 
             {/* BACK BUTTON */}
-            <div className="flex justify-center mt-12 sm:mt-16">
+            <div className="flex justify-center mt-16">
               <button
                 onClick={() => setActiveSection("home")}
-                className="px-7 py-3.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-[#49E46A] hover:text-black transition text-sm font-bold"
+                className="px-8 py-4 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-[#49E46A] hover:text-black transition"
               >
                 ← Kembali Home
               </button>
@@ -386,22 +399,15 @@ export default function GAKopiLandingPage() {
               Nongkrong Santai
             </h2>
 
-            <p className="text-white/70 max-w-2xl mx-auto mb-14 text-sm sm:text-base">
-              Temukan tempat nongkrong favoritmu di
-              Palaran. Suasana nyaman, kopi mantap,
-              dan cocok buat santai malam.
-            </p>
-
             <div className="rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-5">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.622780681456!2d117.16019467435702!3d-0.5672575352616757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df681001832dd3b%3A0x20a4f38c5f845e5!2sGA%20kopi!5e0!3m2!1sid!2sid!4v1780108491393!5m2!1sid!2sid"
+                src="https://maps.google.com/maps?q=GA+kopi&cid=147017043101107685&output=embed"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-[24px] w-full h-[300px] sm:h-[450px]"
+                title="Peta Lokasi GA Kopi"
               ></iframe>
             </div>
 
