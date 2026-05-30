@@ -394,7 +394,7 @@ export default function GAKopiLandingPage() {
 
             <div className="rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-5">
               <iframe
-                src="https://maps.google.com/maps?cid=147017043101107685&output=embed"
+                src="https://maps.google.com/maps?cid=147017043101107685&z=18&output=embed"
                 width="100%"
                 height="100%"
                 loading="lazy"
