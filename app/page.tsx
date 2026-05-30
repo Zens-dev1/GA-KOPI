@@ -394,7 +394,7 @@ export default function GAKopiLandingPage() {
 
             <div className="rounded-[32px] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm p-5">
               <iframe
-                src="https://maps.google.com/maps?q=samarinda&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=C5M7%2B443%20Jl.%20Adi%20Sucipto%20Rw.%20Makmur%20Palaran%20Samarinda&t=&z=17&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 loading="lazy"
